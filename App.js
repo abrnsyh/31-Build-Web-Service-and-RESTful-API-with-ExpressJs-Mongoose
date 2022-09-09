@@ -4,7 +4,7 @@ const dbConnection = require("./config/dbConnection");
 const rootRouter = require("./routes/index");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 dbConnection.then(() => console.log("berhasil connect")).catch((error) => console.log("error: ", error));
 

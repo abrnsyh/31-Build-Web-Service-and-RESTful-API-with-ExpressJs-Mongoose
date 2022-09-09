@@ -1,6 +1,7 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
-const url = "mongodb+srv://abrnsyh:Abrian123456@cluster0.5oqtgsj.mongodb.net/?retryWrites=true&w=majority";
+const url = process.env.MONGO_ATLAS || "localhost";
 
 const dbConnection = mongoose.connect(url);
 
